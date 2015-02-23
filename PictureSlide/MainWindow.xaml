@@ -1,0 +1,21 @@
+﻿<Window x:Class="PictureSlide.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PicSlide" Height="260" Width="460" WindowStyle="None" PreviewKeyDown="Window_PreviewKeyDown" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Height="180" Width="400" Margin="20" Name="ImageGrid" VerticalAlignment="Top" MouseLeftButtonDown="Image_MouseLeftButtonDown" Background="#01000000">
+            <Image Height="070" Width="200" Margin="130,0,0,0" HorizontalAlignment="Left" Stretch="Fill" Name="Image3" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown" Opacity="0"/>
+            <Image Height="090" Width="200" Margin="110,0,0,0" HorizontalAlignment="Left" Stretch="Fill" Name="Image2" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+            <Image Height="110" Width="200" Margin="090,0,0,0" HorizontalAlignment="Left" Stretch="Fill" Name="Image1" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+            <Image Height="130" Width="200" Margin="070,0,0,0" HorizontalAlignment="Left" Stretch="Fill" Name="Image0" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+        </Grid>
+        <DockPanel Height="30" Width="122" Margin="158,200,180,30" Background="#22000000" PreviewKeyDown="Window_PreviewKeyDown">
+            <Image Width="30" Height="30" DockPanel.Dock="Left" Source="Resources\btn_previous_P.png" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="Buttons_MouseEnter" MouseLeave="Buttons_MouseLeave" Name="Left" Cursor="Hand"/>
+            <Image Width="30" Height="30" DockPanel.Dock="Left" Source="Resources\btn_menu_P.png" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="Buttons_MouseEnter" MouseLeave="Buttons_MouseLeave" Name="Open" Cursor="Hand"/>
+            <Image Width="30" Height="30" DockPanel.Dock="Left" Source="Resources\btn_play_P.png" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="Buttons_MouseEnter" MouseLeave="Buttons_MouseLeave" Name="Play" Cursor="Hand"/>
+            <Image Width="30" Height="30" DockPanel.Dock="Left" Source="Resources\btn_next_P.png" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="Buttons_MouseEnter" MouseLeave="Buttons_MouseLeave" Name="Right" Cursor="Hand"/>
+        </DockPanel>
+        <Image Source="Resources\close-P.png" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="Buttons_MouseEnter" MouseLeave="Buttons_MouseLeave" x:Name="Close" Margin="355,10,84,231" Cursor="Hand"/>
+        <Label Content="©Kappspot" HorizontalAlignment="Left" Margin="296,234,0,0" VerticalAlignment="Top" Width="80" Opacity="0.7"/>
+    </Grid>
+</Window>
