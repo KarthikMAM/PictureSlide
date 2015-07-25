@@ -261,7 +261,7 @@ namespace PictureSlide
                         {
                             sleepTime = SLEEP_INTERVAL;
                             Play.Name = "Pause";
-                            Play.Source = new BitmapImage(new Uri(@"G:\My App Creations\C# Projects\Utility Apps\Display Utility\PictureSlide\PictureSlide\Resources\btn_pause_P.png"));
+                            Play.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Resources\btn_pause_P.png"));
                             isPlaying = true;
                             playDirection = currentKey;
                             NextImage(playDirection);
