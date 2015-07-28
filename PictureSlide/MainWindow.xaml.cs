@@ -282,7 +282,7 @@ namespace PictureSlide
                         break;
                     case "Pause":
                         Play.Name = "Play";
-                        Play.Source = new BitmapImage(new Uri(@"G:\My App Creations\C# Projects\Utility Apps\Display Utility\PictureSlide\PictureSlide\Resources\btn_play_P.png"));
+                        Play.Source = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Resources\btn_play_P.png"));
                         isPlaying = false;
                         break;
                 }
