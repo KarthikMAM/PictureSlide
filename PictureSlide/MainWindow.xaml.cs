@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -50,6 +51,23 @@ namespace PictureSlide
 
             animationTimer.Interval = TimeSpan.FromMilliseconds(15);
             animationTimer.Tick += animationTimer_Tick;
+
+            GestureRecognition x = new GestureRecognition(Thread.CurrentThread);
+            x.sampleCollector.ProgressChanged += sampler_ProgressChanged;
+
+        }
+
+        void sampler_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
+        {
+            switch(e.ProgressPercentage)
+            {
+                case 1:
+                    NextImage(Key.Left);
+                    break;
+                case 2:
+                    NextImage(Key.Right);
+                    break;
+            }
         }
 
         void animationTimer_Tick(object sender, EventArgs e)
